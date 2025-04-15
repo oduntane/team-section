@@ -1,96 +1,238 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: unset;
+  margin: unset;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Colors */
+  --color-white: #FFFEFE;
+  --color-anti-flash-white: #F3F4F6;
+  --color-charcoal: #394150;
+  --color-black: #000000;
+  --color-denim-blue: #263FA9;
+  --color-middle-blue-green: #86E7D4;
+  --color-baby-blue-eyes: #9DC4F8;
+  --color-vodka: #C1B6F8;
+  --color-pink-pearl: #EDACD2;
+  --color-feldspar: #F8D8B0;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* font */
+  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.3;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  text-decoration: none;
+  color: inherit;
 }
 
-body {
-  margin: 0;
+/* Text */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.label {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.body {
+  font-size: 1rem;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.container {
+  display: grid;
+  width: 94%;
+  margin-inline: auto;
+  padding-block: 32px;
+}
+
+.summary {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  gap: 12px;
+  padding-block: 32px 106px;
+  padding-inline: 50px 75px;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+  background-color: var(--color-anti-flash-white);
+  background-image: url("/Background_decor@2x.png");
+  background-repeat: no-repeat;
+  object-fit: contain;
+
+
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.summary > span {
+  color: var(--color-denim-blue);
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.summary > .heading {
+  color: var(--color-black);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.summary > p {
+  color: var(--color-charcoal);
 }
 
-.card {
-  padding: 2em;
+.member, .see-all {
+  height: 610px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
-.read-the-docs {
-  color: #888;
+.member > div {
+  display: flex;
+  flex-direction: column;
+  padding: 72px 52px;
+  color: var(--color-white);
+  gap: 18px;
+
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.liam {
+  background-color: var(--color-vodka);
+  background-image:  linear-gradient(to top, var(--color-black) 0%, 30%, #FFFFFF00), url("/person_1@2x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.sophia {
+  background-color: var(--color-pink-pearl);
+  background-image:  linear-gradient(to top, var(--color-black) 0%, 30%, #FFFFFF00), url("/person_2@2x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+}
+
+.ethan {
+  background-color: var(--color-baby-blue-eyes);
+  background-image:  linear-gradient(to top, var(--color-black) 0%, 30%, #FFFFFF00), url("/person_3@2x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+}
+
+.isabella {
+  background-color: var(--color-feldspar);
+  background-image:  linear-gradient(to top, var(--color-black) 0%, 30%, #FFFFFF00), url("/person_4@2x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+}
+
+.noah {
+  background-color: var(--color-middle-blue-green);
+  background-image:  linear-gradient(to top, var(--color-black) 0%, 30%, #FFFFFF00), url("/person_5@2x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+}
+
+.see-all {
+  padding: 50px;
+  color: var(--color-charcoal);
+  background-color: var(--color-anti-flash-white);
+  border-bottom-right-radius: 1.6rem;
+  border-bottom-left-radius: 1.6rem;
+}
+
+.see-all a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    grid-auto-rows: 288px;
   }
-  a:hover {
-    color: #747bff;
+
+  .summary {
+    grid-column: 1/-1;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .member {
+    width: unset;
+    height: unset;
+    padding: 24px;
+  }
+
+  .member > div {
+    padding: unset;
+  }
+
+  .see-all {
+    width: unset;
+    height: unset;
+    grid-column: 1;
+    grid-row: 3;
+    border-bottom-right-radius: unset;
+  }
+
+  .noah {
+    border-bottom-right-radius: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: var(--color-anti-flash-white);
+    background-image: url("/Background_decor@2x.png");
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-origin: padding-box;
+    background-clip: padding-box;
+    border-top-left-radius: 1.6rem;
+    border-bottom-left-radius: 1.6rem;
+    padding: unset;
+  }
+
+  .member {
+    padding: 45px;
+  }
+
+  .summary {
+    grid-column: 1 / span 2;
+    border-top-right-radius: unset;
+    background-image: unset;
+    background-color: transparent;
+  }
+
+  .sophia {
+    border-top-right-radius: 1.6rem;
+  }
+
+  .see-all {
+    grid-row: 2;
+    background-color: transparent;
   }
 }
